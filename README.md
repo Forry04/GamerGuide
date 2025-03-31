@@ -218,5 +218,5 @@ app.Run();
 4. Töltsd ki az alábbi mezőket:
    - **Model class**: `_MyModel_`
    - **Data context class**: `_MyDbContext_`
-   - **Controller name**: `_MyModel_sController` (alapértelmezetten megadott, nem szükséges át nevezni)
+   - **Controller name**: `_MyModel_sController` (alapértelmezetten megadott, nem szükséges átnevezni)
 5. Kattints a **Add** gombra, és a Visual Studio automatikusan generálja a szükséges kódot.
