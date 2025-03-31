@@ -13,7 +13,7 @@
 1. Nyisd meg a **View -> SQL Server Object Explorer** menüt a Visual Studio-ban.
 2. Csatlakozz az **MSSQLLocalDB** példányhoz. Az alkalmazás az **MSSQLLocalDB** példányt használja, ezért győződj meg róla, hogy az adatbázis script MSSQL-kompatibilis.
 3. Hozz létre egy új lekérdezést (**New Query**).
-4. Futtasd az alábbi parancsokat az adatbázis létrehozásához és használatához:
+4. Például:  Futtasd az alábbi parancsokat az adatbázis létrehozásához és használatához:
 
    ```sql
    -- Adatbázis létrehozása
