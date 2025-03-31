@@ -99,7 +99,13 @@ Server=(localdb)\MSSQLLocalDB;Database=GamerGuideDB;Trusted_Connection=True;
 ---
 
 # appsettings.json
-A kapcsolati sztringet az `appsettings.json` fájlban kell megadni. Példa:
+A kapcsolati sztringet az `appsettings.json` fájlban kell megadni. 
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "_MyConnectionString_"
+  },
+```
+Példa:
 
 ```json
 {
