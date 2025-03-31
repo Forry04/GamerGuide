@@ -55,6 +55,40 @@
 
 ---
 
+
+
+# NuGet Package Manager Console
+### Hogyan érheted el a NuGet Package Manager Console-t?
+1. Nyisd meg a Visual Studio-t.
+2. A menüsorban válaszd ki a **Tools** menüt.
+3. Kattints a **NuGet Package Manager -> Package Manager Console** lehetőségre.
+4. A konzol megjelenik az alsó panelen.
+
+### Szükséges parancsok
+Futtasd az alábbi parancsokat a NuGet Package Manager Console-ban a szükséges csomagok telepítéséhez:
+
+```bash
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.Tools
+```
+
+#### Magyarázat:
+1. **Microsoft.EntityFrameworkCore.SqlServer**: Az SQL Server adatbázis támogatásához szükséges csomag.
+2. **Microsoft.EntityFrameworkCore.Design**: A migrációk és tervezési időben használt eszközök támogatásához.
+3. **Microsoft.EntityFrameworkCore.Tools**: Parancssori eszközök, például a `Scaffold-DbContext` parancs futtatásához.
+
+---
+
+# Scaffold-DbContext
+Generáld a DbContext osztályt és a modelleket az alábbi paranccsal:
+
+```bash
+Scaffold-DbContext "_MyConnectionString_" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context _MyDbContext_ -DataAnnotations
+```
+
+---
+
 # Hogyan szerezheted meg a DefaultConnection kapcsolati sztringet?
 1. Nyisd meg a **SQL Server Object Explorer**-t a Visual Studio-ban (**View -> SQL Server Object Explorer**).
 2. Csatlakozz az **MSSQLLocalDB** példányhoz.
@@ -89,30 +123,6 @@ A kapcsolati sztringet az `appsettings.json` fájlban kell megadni. Példa:
 }
 ```
 
----
-
-# NuGet Package Manager Console
-### Hogyan érheted el a NuGet Package Manager Console-t?
-1. Nyisd meg a Visual Studio-t.
-2. A menüsorban válaszd ki a **Tools** menüt.
-3. Kattints a **NuGet Package Manager -> Package Manager Console** lehetőségre.
-4. A konzol megjelenik az alsó panelen.
-
-### Szükséges parancsok
-Futtasd az alábbi parancsokat a NuGet Package Manager Console-ban a szükséges csomagok telepítéséhez:
-
-```bash
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
-Install-Package Microsoft.EntityFrameworkCore.Design
-Install-Package Microsoft.EntityFrameworkCore.Tools
-```
-
-#### Magyarázat:
-1. **Microsoft.EntityFrameworkCore.SqlServer**: Az SQL Server adatbázis támogatásához szükséges csomag.
-2. **Microsoft.EntityFrameworkCore.Design**: A migrációk és tervezési időben használt eszközök támogatásához.
-3. **Microsoft.EntityFrameworkCore.Tools**: Parancssori eszközök, például a `Scaffold-DbContext` parancs futtatásához.
-
----
 
 # program.cs
 Regisztráld a DbContext osztályt és engedélyezd a CORS-t a `program.cs` fájlban:
