@@ -18,11 +18,11 @@
    ```sql
    -- Adatbázis létrehozása
    CREATE DATABASE GamerGuideDB;
-   GO
+   
 
    -- Adatbázis használata
    USE GamerGuideDB;
-   GO
+   
 
    -- Tábla létrehozása
    CREATE TABLE Players (
@@ -31,7 +31,7 @@
        Score INT NOT NULL,
        JoinDate DATETIME DEFAULT GETDATE()
    );
-   GO
+   
    ```
 
    Ha a script MySQL-re készült, azt át kell írni MSSQL-re. Példa:
